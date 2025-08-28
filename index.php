@@ -54,7 +54,7 @@ if (isset($_POST['upload'])) {
         if (mysqli_num_rows($resultCheckRef) > 0) {
             $result = '<div class="alert alert-danger mb-2">' . "มี Slip นี้อยู่ในระบบแล้ว" . '</div>';
         } else {
-            if ($res['data']['receiver_name'] !== "KANNIKA CHERD") {
+            if ($res['data']['receiver_name'] !== "ชื่อบัญชี......") {
                 $result = '<div class="alert alert-danger mb-2">' . "ชื่อบัญชีไม่ตรงกัน" . '</div>';
             } else {
                 $sql = "INSERT INTO slip_log (ref, sender_name, sender_bank, receiver_name, amount, tranfer_date)
